@@ -1,17 +1,22 @@
-// import ListGroup from "./components/ListGroup";
-import Alert from './components/Alert';
-import Button from './components/Button';
-import ListGroup from './components/ListGroup';
-import { BsFillCalendarFill } from 'react-icons/bs';
 import { useState } from 'react';
-import Like from './components/Like';
+
+// import ListGroup from "./components/ListGroup";
+// import Alert from './components/Alert';
+// import Button from './components/Button';
+// import ListGroup from './components/ListGroup';
+// import Like from './components/Like';
+// import NavBar from './components/NavBar';
+// import Carts from './components/Carts';
+import Form from './components/Form';
+
+// import { BsFillCalendarFill } from 'react-icons/bs';
 
 import './App.scss';
 
 function App() {
 
-// const [alertVisible, setAlertVisible] = useState(false);
-
+  // const [alertVisible, setAlertVisible] = useState(false);
+  // const [products, setProducts] = useState(['Product 1', 'Product 2']);
   // let cities = ["New York", "San Francisco", "Dallas", "Paris", "Tokyo"];
   // const handleSelectItem = (item: string) => console.log(item);
   
@@ -30,8 +35,21 @@ function App() {
   //   </>
   // );
 
+  // return (
+  //   <><Like onClick={() => console.log('Clicked')}/></>
+  // )
+
+  // return (
+  //   <div>
+  //     <NavBar productsCount={products.length} />
+  //     <Carts products={products} onClear={() => setProducts([])} />
+  //   </div>
+  // )
+
   return (
-    <><Like onClick={() => console.log('Clicked')}/></>
+    <div>
+      <Form />
+    </div>
   )
 }
 
