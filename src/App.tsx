@@ -1,5 +1,7 @@
 import { useState } from "react";
 
+import categories from "./expense-tracker/categories";
+
 // import ListGroup from "./components/ListGroup";
 // import Alert from './components/Alert';
 // import Button from './components/Button';
@@ -15,8 +17,6 @@ import ExpenseForm from "./expense-tracker/components/ExpenseForm";
 // import { BsFillCalendarFill } from 'react-icons/bs';
 
 import "./App.scss";
-
-export const categories = ["Groceries", "Utilities", "Entertainment"];
 
 function App() {
   // const [alertVisible, setAlertVisible] = useState(false);
@@ -74,7 +74,11 @@ function App() {
   return (
     <div>
       <div className="mb-5">
-        <ExpenseForm />
+        <ExpenseForm
+          onSubmit={(expense) =>
+            setExpenses([...expenses, { ...expense, id: expenses.length + 1 }])
+          }
+        />
       </div>
       <div className="mb-3">
         <Expensefilter
